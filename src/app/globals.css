@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+    transition-delay: 9999s;
+}
+
+@layer components {
+    .auth-input.default .input-wrapper {
+        @apply border-black;
+    }
+
+    .auth-input .alt label {
+        @apply text-white;
+    }
+
+    .auth-input.alt .input-wrapper {
+        @apply border-white;
+    }
+
+    .blue .login-submit-btn,
+    .blue .profile-edit-btn {
+        @apply text-blue-900 bg-blue-200;
+    }
+
+    .orange .login-submit-btn,
+    .orange .profile-edit-btn {
+        @apply text-orange-600 bg-orange-200;
+    }
+}
+
+@layer base {
+    .blue .register {
+        @apply bg-[url('/bg-register-blue.png')];
+    }
+
+    .blue .login-bg {
+        @apply bg-[url('/bg-login-blue.png')];
+    }
+
+    .blue .login-title,
+    .blue .login-link {
+        @apply text-blue-900;
+    }
+
+    .blue .profile-header,
+    .blue .profile-footer,
+    .blue .profile-banner {
+        @apply bg-blue-900;
+    }
+
+    .orange .register {
+        @apply bg-[url('/bg-register-orange.png')];
+    }
+
+    .orange .login-bg {
+        @apply bg-[url('/bg-login-orange.png')];
+    }
+
+    .orange .login-title,
+    .orange .login-link {
+        @apply text-orange-600;
+    }
+
+    .orange .profile-header,
+    .orange .profile-footer,
+    .orange .profile-banner {
+        @apply bg-orange-600;
+    }
+}
